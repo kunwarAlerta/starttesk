@@ -44,7 +44,7 @@ const io = require("socket.io")(server);
 
 socket(io);
 
-server.listen(config.get("port"), async () => {
+server.listen(process.env.PORT || config.get("port"), async () => {
   console.log(`Node env :${process.env.NODE_ENV}.`);
   console.log(`Server Running on port: ${config.get("port")}.`);
   await connection.mongoDbconnection();

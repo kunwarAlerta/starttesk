@@ -1,5 +1,5 @@
 {
-    "port": 8080,
+    "port": 8000,
     "mongoUrl": "mongodb+srv://princeinder:prince123@cluster0.lbs8d.mongodb.net/startesk?retryWrites=true&w=majority",
     "jwtsecret": "jwtsecret",
     "jwtexpire": 800000
