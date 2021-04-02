@@ -1,0 +1,7 @@
+{
+    "port": 8080,
+    "mongoUrl": "mongodb+srv://princeinder:prince123@cluster0.lbs8d.mongodb.net/startesk?retryWrites=true&w=majority",
+    "jwtsecret": "jwtsecret",
+    "jwtexpire": 800000
+  }
+  
