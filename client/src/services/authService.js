@@ -5,6 +5,9 @@ import {
   USER_SIGNIN_SUCCESS,
   USER_SIGNIN_ERROR,
   USER_LOGOUT,
+  USER_REGISTER_LOADING,
+  USER_REGISTER_SUCCESS,
+  USER_REGISTER_ERROR
 } from "../utils/constants/userConstants";
 import swal from 'sweetalert';
 
@@ -27,7 +30,7 @@ const login = (input) => async (dispatch) => {
 
 const register = (input) => async (dispatch) => {
   dispatch({
-    type: USER_SIGNIN_LOADING,
+    type: USER_REGISTER_LOADING,
     payload: input,
   });
   try {
@@ -40,9 +43,9 @@ const register = (input) => async (dispatch) => {
       icon: "success",
       button: "Ok",
     });
-    dispatch({ type: USER_SIGNIN_SUCCESS, payload: data.data});
+    dispatch({ type: USER_REGISTER_SUCCESS, payload: data.data});
   } catch (error) {
-    dispatch({ type: USER_SIGNIN_ERROR, payload: error.response.data.message });
+    dispatch({ type: USER_REGISTER_ERROR, payload: error.response.data.message });
   }
 };
 
